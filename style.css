@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+html{
+    font-family:'Poppins';
+}
+body{
+    background: linear-gradient(45deg,#d2001a,#7462ff,#23d5ab);
+    background-size: 300% 300%;
+    animation: color 5s ease-in-out infinite;
+}  
+@keyframes color{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.active {
+    color: green;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    background-image: url(./img/head.jpg);
+    background-size: cover;
+    background-position: center;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.logo{
+    color: rgb(255, 0, 0);
+    font-size: 45px;
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 20px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li a:hover{
+    color: red;
+    transition: .3s;
+}
+button{
+    border: none;
+    background-color: red;
+    padding: 12px 30px;
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    transition: .4s;
+}
+button:hover{
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+/* HEAD */
+.head {
+    font-size: 50px;
+}
+
+header{
+    min-height: 100vh;
+	width: 100%;
+    background-image: url(./img/head.jpg);
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    
+    
+}
+.header-content {
+    padding-top: 300px;
+    margin-bottom: 350px;
+    color: white;
+    text-align: center;
+    
+}
+.header-content h2{
+    font-size: 4vmin;
+}
+.line {
+    width: 400px;
+    height: 4px;
+    background-color: blue;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+.header-content h1{
+    font-size: 7vmin;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: #222;
+}
+.header-content h1::before{
+    content: attr(data-text);
+    position: absolute;
+    color: #fff;
+    width: 350px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid #fff;
+    animation: animate 4s linear infinite;
+    filter: drop-shadow(0 0 20px #fff);
+}
+@keyframes animate{
+    0%,10%,100%{
+        width: 0;
+    }
+    70%,90%{
+        width: 34%;
+    }
+}
+.ctn{
+    padding: 8px 15px;
+    background-color: blue;
+    border-radius: 30px;
+    color: whitesmoke;
+}
+.header-content h1{
+    font-size: 7vmin;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+/* CERTI */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.card{
+    background: white;
+    width: 27%;
+    height: 350px;
+    margin: 10px;
+    border-radius: 15px;
+    transition: 0.5s;
+	grid-template-columns: repeat(auto-fit, minmax(340px, auto));
+	grid-gap: 2rem;
+	align-items: center;
+}
+
+
+.card-img {
+    background-color: aqua;
+    height: 350px;
+    margin-bottom:10px ;
+    background-size: cover;
+    border-radius: 15px 15px 15px 15px;
+}
+.card:hover{
+    box-shadow: 0 0 40px 0px rgb(255, 251, 18);
+    transform: scale(1.04);
+	cursor: pointer;
+}
+
+.card h2{
+    align-items: center;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.cer-1{
+    background-image: url(./img/cer/cer1.jpg);
+}
+.cer-2{
+    background-image: url(./img/cer/cer2.jpg);
+}
+.cer-3{
+    background-image: url(./img/cer/cer3.jpg);
+}
+.cer-4{
+    background-image: url(./img/cer/cer4.jpg);
+}
+.cer-5{
+    background-image: url(./img/cer/cer5.jpg);
+}
+.cer-6{
+    background-image: url(./img/cer/cer6.jpg);
+}
+
+.card:hover {
+    background-color: gray;
+    color: white;
+}
+
+
+
+
+
+
+
+/* About Section */
+.about{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+
+    
+}
+.pic{
+    display: flex;
+    margin-left: 150px;
+}
+.pic img{
+    width: 575px;
+    height: 400px;
+}
+.headings{
+    padding-top: 20px;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+.intro{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+}
+.intro h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+/* Skills */
+#skills{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.row{
+    display: flex;
+    justify-content: center;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    border-radius:360px ;
+    background-color: whitesmoke;    
+
+    
+}
+
+.box img{
+    width: 70%;
+    margin-top: 15%;
+}
+.box img:hover{
+    transform: scale(1.09);
+	cursor: pointer;
+    transition: .4s;
+}
